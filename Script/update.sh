@@ -54,7 +54,7 @@ fi
 
 echo "[*] generating source..."
 
-PACKAGE_NAME="CSSH2"
+PACKAGE_NAME="libssh2"
 
 rm -rf Sources
 mkdir -p Sources/$PACKAGE_NAME

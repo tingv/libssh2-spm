@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "CSSH2",
+    name: "libssh2",
     platforms: [
         .iOS(.v12),
         .macOS(.v10_13),
@@ -11,14 +11,14 @@ let package = Package(
         .watchOS(.v5),
     ],
     products: [
-        .library(name: "CSSH2", targets: ["CSSH2"]),
+        .library(name: "libssh2", targets: ["libssh2"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Lakr233/openssl-spm.git", from: "3.2.1"),
+        .package(url: "https://github.com/tingv/openssl-spm.git", from: "3.2.1"),
     ],
     targets: [
         .target(
-            name: "CSSH2",
+            name: "libssh2",
             dependencies: [
                 .product(name: "OpenSSL", package: "openssl-spm"),
             ],
@@ -52,7 +52,7 @@ let package = Package(
                 .define("HAVE_UNISTD_H"),
             ]
         ),
-        .testTarget(name: "CSSH2Test", dependencies: ["CSSH2"]),
+        .testTarget(name: "libssh2Test", dependencies: ["libssh2"]),
     ],
     cxxLanguageStandard: .cxx11
 )
