@@ -1,4 +1,4 @@
-import CSSH2
+import libssh2
 import XCTest
 
 class MyTest: XCTestCase {
